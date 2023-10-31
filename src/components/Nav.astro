@@ -3,19 +3,19 @@ class="sticky z-50 px-2 py-2 mx-4 border-2 border-current -mb-28 sm:mx-auto sm:m
   <ul class="flex flex-wrap gap-1 text-base font-medium sm:grid sm:grid-flow-col sm:gap-2 sm:auto-cols">
     <slot name="before-items" />
     <li class="nav-item">
-      <a class="btn-secondary group" role="link" aria-label="Check the benefits" href="#benefits"><span class="text-current group-hover:text-current">Benefits</span></a>
+      <a class="btn-secondary group" role="button" aria-label="Check the benefits" href="#benefits"><span class="text-current group-hover:text-current">Benefits</span></a>
     </li>
     <li class="nav-item">
-      <a class="btn-secondary group" role="link" aria-label="Read our recent work" href="#recentwork"><span class="text-current group-hover:text-current">Recent work</span></a>
+      <a class="btn-secondary group" role="button" aria-label="Read our recent work" href="#recentwork"><span class="text-current group-hover:text-current">Recent work</span></a>
     </li>
     <li class="nav-item">
-      <a class="btn-secondary group" role="link" aria-label="A list of things we do" href="#whatwedo"><span class="text-current group-hover:text-current">What we do</span></a>
+      <a class="btn-secondary group" role="button" aria-label="A list of things we do" href="#whatwedo"><span class="text-current group-hover:text-current">What we do</span></a>
     </li>
     <li class="nav-item">
-      <a class="btn-secondary group" role="link" aria-label="Our process for working" href="#sow"><span class="text-current group-hover:text-current">How we work</span></a>
+      <a class="btn-secondary group" role="button" aria-label="Our process for working" href="#sow"><span class="text-current group-hover:text-current">How we work</span></a>
     </li>
     <li class="nav-item">
-      <a class="btn-secondary group" role="link" aria-label="Price of our packages" href="#pricing"><span class="text-current group-hover:text-current">Pricing</span></a>
+      <a class="btn-secondary group" role="button" aria-label="Price of our packages" href="#pricing"><span class="text-current group-hover:text-current">Pricing</span></a>
     </li>
     <slot name="after-items" />
   </ul>
@@ -26,14 +26,14 @@ class="sticky z-50 px-2 py-2 mx-4 border-2 border-current -mb-28 sm:mx-auto sm:m
       const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
           const id = entry.target.getAttribute('id');
-          const navLink = document.querySelector(`nav a  role="link" aria-label="Go to top"[href="#${id}"]`);
+          const navLink = document.querySelector(`nav a[href="#${id}"]`);
           if (entry.intersectionRatio > 0) {
           setTimeout(() => {
-              document.querySelector(`nav a  role="link" aria-label="Go to top"[href="#${id}"]`).parentElement.classList.add('nav-active');
+              document.querySelector(`nav a[href="#${id}"]`).parentElement.classList.add('nav-active');
           }, 50); // add a 50ms delay
           } else {
           setTimeout(() => {
-              document.querySelector(`nav a  role="link" aria-label="Go to top"[href="#${id}"]`).parentElement.classList.remove('nav-active');
+              document.querySelector(`nav a[href="#${id}"]`).parentElement.classList.remove('nav-active');
           }, 50); // add a 100ms delay
           }
       });
