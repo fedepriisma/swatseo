@@ -8,6 +8,7 @@ import compressor from "astro-compressor";
 export default defineConfig({
   site: 'https://fedepriisma.github.io',
   base: '/swatseo',
+  output: 'static', // for github pages
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
