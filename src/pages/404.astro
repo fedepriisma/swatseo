@@ -1,0 +1,38 @@
+---
+import MainHead from "../components/MainHead.astro";
+// import FooterScripts from '../../components/FooterScripts.astro';
+import Footer from "../components/Footer.astro";
+import svgSymbol from "../img/symbols.svg?url";
+---
+<html lang="en" class="antialiased scroll-smooth">
+  <head>
+    <MainHead
+      title="404 - SWAT SEO - An effective SEO Team for your Startup"
+      description="An effective SEO Team for your Startup"
+    />
+  </head>
+  <body class="antialiased text-primary-950 bg-primary-50 pattern-bg-light">
+    <header id="page-intro" class="lg:px-5 scroll-mt-12">
+      <head>
+        <div class="flex justify-center mt-8 max-h-12">
+          <svg role="img" class="h-auto fill-current w-fit max-h-7">
+            <use xlink:href={svgSymbol + "#swatseo-logo"}></use>
+          </svg>
+          <div class="text-base sr-only">
+            SWAT SEO - An effective SEO Team for your Startup
+          </div>
+        </div>
+      </head>
+      <div
+        class="px-4 mx-auto mt-12 text-center sm:px-6 md:max-w-2xl md:px-4 lg:max-w-4xl lg:px-12"
+      >
+	  <svg role="img" style="width: clamp(3rem, 50vw, 100vw);height: clamp(3rem, 50vh, 100vh);">
+		<use xlink:href={svgSymbol + "#404-sign"}></use>
+	  </svg>
+        <h1 class="text-3xl leading-none sm:text-4xl font-display">🤷‍♀️ This is not the page you're looking for...</h1>
+
+        <a href="/" class="flex items-center px-2 py-2 rounded-full hover:bg-emerald-200 hover:text-emerald-900 hover:transition-all group">Back home</a>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+module.exports = {
+	corePlugins: {
+		container: false,
+	},
+	content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
+	theme: {
+		screens: {...defaultTheme.screens},
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			white: colors.white,
+			primary: {
+				50:  'rgb(var(--color-primary-50) / <alpha-value>)',
+				100: 'rgb(var(--color-primary-100) / <alpha-value>)',
+				200: 'rgb(var(--color-primary-200) / <alpha-value>)',
+				300: 'rgb(var(--color-primary-300) / <alpha-value>)',
+				400: 'rgb(var(--color-primary-400) / <alpha-value>)',
+				DEFAULT: 'rgb(var(--color-primary-500) / <alpha-value>)',
+				500: 'rgb(var(--color-primary-500) / <alpha-value>)',
+				600: 'rgb(var(--color-primary-600) / <alpha-value>)',
+				700: 'rgb(var(--color-primary-700) / <alpha-value>)',
+				800: 'rgb(var(--color-primary-800) / <alpha-value>)',
+				900: 'rgb(var(--color-primary-900) / <alpha-value>)',
+				950: 'rgb(var(--color-primary-950) / <alpha-value>)',
+			},
+			secondary: {
+				50:  'rgb(var(--color-secondary-50) / <alpha-value>)',
+				100: 'rgb(var(--color-secondary-100) / <alpha-value>)',
+				200: 'rgb(var(--color-secondary-200) / <alpha-value>)',
+				300: 'rgb(var(--color-secondary-300) / <alpha-value>)',
+				400: 'rgb(var(--color-secondary-400) / <alpha-value>)',
+				500: 'rgb(var(--color-secondary-500) / <alpha-value>)',
+				600: 'rgb(var(--color-secondary-600) / <alpha-value>)',
+				700: 'rgb(var(--color-secondary-700) / <alpha-value>)',
+				800: 'rgb(var(--color-secondary-800) / <alpha-value>)',
+				900: 'rgb(var(--color-secondary-900) / <alpha-value>)',
+				950: 'rgb(var(--color-secondary-950) / <alpha-value>)',
+			},
+		},
+		fontFamily: {
+			sans: 'var(--font-body)',
+			display: 'var(--font-display)',
+			mono: 'var(--font-mono)',
+		},
+		fontSize: {
+			xs: 'var(--font-size-xs)',
+			sm: 'var(--font-size-sm)',
+			base: 'var(--font-size-base)',
+			md: 'var(--font-size-md)',
+			lg: 'var(--font-size-lg)',
+			xl: 'var(--font-size-xl)',
+			'2xl': 'var(--font-size-2xl)',
+			'3xl': 'var(--font-size-3xl)',
+			'4xl': 'var(--font-size-4xl)',
+			'5xl': 'var(--font-size-5xl)',
+			'6xl': 'var(--font-size-6xl)',
+			'7xl': 'var(--font-size-7xl)',
+			'8xl': 'var(--font-size-8xl)',
+			'9xl': 'var(--font-size-9xl)',
+		},
+	},
+}
