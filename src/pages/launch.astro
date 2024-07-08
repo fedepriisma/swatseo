@@ -1,0 +1,57 @@
+---
+import MainHead from '../components/MainHead.astro';
+const title = "Grow traffic and revenue with SEO Content | SwatSEO";
+const description = "Increasing your traffic and revenue through data-driven SEO is easy with SwatSEO's our tailored conversion-focused strategy.";
+const ogTitle = title;
+const ogDescription = description;
+const ogImage = "https://swatseo.vercel.app/opengraph-image.png";
+const website = "https://swatseo.vercel.app/"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch Page</title>
+
+  <head>
+    <MainHead
+      title={title}
+      description={description}
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={website} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={website} />
+    <meta property="twitter:title" content={ogTitle} />
+    <meta property="twitter:description" content={ogDescription} />
+    <meta property="twitter:image" content={ogImage} />
+
+  </head>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+    }
+  </style>
+</head>
+<body>
+  <iframe src={website} allowfullscreen></iframe>
+</body>
+</html>
